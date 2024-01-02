@@ -1,10 +1,9 @@
 import pickle
 import streamlit as st
 
-with open('model/rf_model.pkl', 'rb') as file:
-    model = pickle.load(file)
-
 def predict_quality(input_data):
+    with open('model/rf_model.pkl', 'rb') as file:
+        model = pickle.load(file)
     predictions = model.predict(input_data)
     return predictions
 
