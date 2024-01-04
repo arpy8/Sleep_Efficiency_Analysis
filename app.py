@@ -31,4 +31,16 @@ rem_sleep = 100-(deep_sleep+light_sleep)
 if st.button('Predict', use_container_width=True):
     input_data = [[age, 1 if gender=="Male" else 0, s_duration, rem_sleep, deep_sleep, light_sleep, float(awakenings), float(caffeine)]]
     predictions = predict_quality(input_data)
-    st.info(f'##### Your sleep score is : {str(round(predictions[0]*100, 3))}%')
+    final_prediction = int(round(predictions[0]*100, 3))
+    final = ""
+    
+    if final_prediction>=85:
+        st.balloons()
+        final = "excellent"
+    elif final_prediction>=65:
+        final = "good"
+    else:
+        final = "below average"
+        
+    
+    st.info(f'##### Sleep Score : {final_prediction}%\nYour sleep was {final}.')
