@@ -12,14 +12,14 @@ A Streamlit app designed to predict the quality of sleep based on various sleep-
 6. **Deep Sleep Percentage:** Slide the deep sleep percentage bar to input the percentage of deep sleep, ranging from 0 to 100.
 7. **Light Sleep Percentage:** Slide the light sleep percentage bar to input the percentage of light sleep, ranging from 0 to 100.
 
+Upon entering these parameters, the app allows you to click the "Predict" button. The machine learning model will then provide a sleep score based on the input data.
+
 ###### Note: The final output is a percentage, of how good your sleep score was.
 - 80% or above: good
 - 50% or above: moderate
 - 49% or below: poor
 
 [refer to this link for source ](https://www.firstbeat.com/en/blog/a-good-nights-sleep-what-does-it-mean/#:~:text=Sleep%20score%20100%20means%20your,amount%20and%20quality%20of%20sleep.) 
-
-Upon entering these parameters, the app allows you to click the "Predict" button. The machine learning model will then provide a sleep score based on the input data.
 
 ## Setup and Requirements (to run the app locally)
 - The app employs the Streamlit library, so ensure you have it installed (`pip install streamlit`).
