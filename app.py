@@ -34,13 +34,13 @@ if st.button('Predict', use_container_width=True):
     final_prediction = int(round(predictions[0]*100, 3))
     final = ""
     
-    if final_prediction>=85:
+    if final_prediction>=80:
         st.balloons()
-        final = "excellent"
-    elif final_prediction>=65:
         final = "good"
+    elif final_prediction>=50:
+        final = "moderate"
     else:
-        final = "below average"
+        final = "poor"
         
     
     st.info(f'##### Sleep Score : {final_prediction}%\nYour sleep was {final}.')
